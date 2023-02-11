@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Yeon+Sung&display=swap");
+
+body {
+  background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  /*display가 flex 속성으로 있을 때 가로축 기준으로 가운데*/
+  align-items: center;
+  /*display가 flex 속성으로 있을 때 세로축 기준으로 가운데*/
+  font-family: "Nanum Pen Script", cursive;
+  min-height: 100vh; /*웹 스크린 실제 크기의 100%를 최소 높이로 갖겠다*/
+  margin: 0px; /*body에 기본적으로 있는 마진을 없애주겠음*/
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 650px) {
+  /* media call : 괄호 안에 있는 모든 규칙들은 min-width 650px 
+    -> 웹 브라우저의 크기가 650px 이상일 때만 이 규칙이 적용됨
+  mix-width와 max-width 속성을 통해 화면의 너비에 따라 규칙 지정
+  주로 반응형 웹 작성 시 사용 */
+  .App {
+    width: 640px;
+    /* 화면이 650px 이상으로 넓을 때 app 컴포넌트의 width를 640px로 고정  */
   }
 }
 
-.App-header {
-  background-color: #282c34;
+@media (max-width: 650px) {
+  .App {
+    width: 90vw;
+    /* 화면이 650px 이하일 때 app 컴포넌트의 width를
+    현재 화면 width의 90%로 설정 */
+  }
+}
+
+#root {
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* rgba에서 a는 transparency, 투명도 조절 */
+}
+
+.App {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* MyButton */
+.MyButton {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  font-size: 18px;
+
+  white-space: nowrap;
+  /* 버튼 안에 있는 글자가 짤려서 두 줄이 되지 않도록 하는 기능 */
+
+  font-family: "Nanum Pen Script", cursive;
+}
+
+.MyButton_default {
+  background-color: #ececec;
+  color: black;
+}
+
+.MyButton_positive {
+  background-color: #64c964;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.MyButton_negative {
+  background-color: #fd565f;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* HEADER */
+header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  display: flex;
+  /* HTML은 기본적으로 세로 정렬인데 가로 정렬이 됨 */
+  align-items: center;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+header > div {
+  /* header의 바로 아래 자식 div */
+  display: flex;
+}
+
+header .head_text {
+  width: 50%;
+  font-size: 25px;
+  justify-content: center;
+}
+
+header .head_btn_left {
+  width: 25%;
+  justify-content: start;
+  /* 해당 공간 왼쪽으로 오게 됨 */
+}
+
+header .head_btn_right {
+  width: 25%;
+  justify-content: end;
+  /* 해당 공간 오른쪽으로 오게 됨 */
+}
+
+header button {
+  font-family: "Nanum Pen Script";
 }
