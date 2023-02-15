@@ -216,3 +216,125 @@ header button {
 .DiaryItem .btn_wrapper {
   min-width: 70px;
 }
+
+/* DiaryEditor */
+/* .DiaryEditor {
+} */
+
+.DiaryEditor section {
+  margin-bottom: 40px;
+}
+
+.DiaryEditor h4 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.DiaryEditor .input_date {
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  cursor: pointer;
+  font-family: "Nanum Pen Script";
+  font-size: 20px;
+}
+
+.DiaryEditor .emotion_list_wrapper {
+  display: grid;
+  /* 그리드, 격자를 만드는 속성 */
+  grid-template-columns: repeat(5, auto);
+  /* 5개의 열을 나열을 하는데, 아이템의 사이즈는 자동으로 */
+  gap: 2%;
+  /* 이미지, 아이템 사이의 갭 */
+}
+
+.DiaryEditor textarea {
+  font-family: "Nanum Pen Script";
+  font-size: 20px;
+
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 200px;
+  resize: vertical;
+  /* textarea 크기가 가로로는 더 이상 커지지 않도록 */
+
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* padding: 20px; 과 같음 */
+}
+
+.DiaryEditor .control_box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* 세로축에서 중앙 맞춰주기 */
+}
+
+/* EmotionItem */
+.EmotionItem {
+  cursor: pointer;
+
+  border-radius: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  display: flex;
+  /* 기본적으로 세로로 배치되는 div 가로로 바꿔주기 */
+  flex-direction: column;
+  /* 근데 세로로 유지 -> 이미지 밑으로 이미지 설명 내려줌 */
+  justify-content: center;
+  /* column을 중심으로 세로의 중앙점 찾아주기 */
+  align-items: center;
+  /* 가장 중앙에 위치 */
+}
+
+.EmotionItem img {
+  width: 50%;
+  /* 이미지 크기가 너무 커서 줄여주기 */
+  margin-bottom: 10px;
+}
+
+.EmotionItem span {
+  font-size: 18px;
+}
+
+.EmotionItem_off {
+  background-color: #ececec;
+}
+
+.EmotionItem_on_1 {
+  background-color: #64c964;
+  color: white;
+}
+
+.EmotionItem_on_2 {
+  background-color: #9dd772;
+  color: white;
+}
+
+.EmotionItem_on_3 {
+  background-color: #fdce17;
+  color: white;
+}
+
+.EmotionItem_on_4 {
+  background-color: #fd8446;
+  color: white;
+}
+
+.EmotionItem_on_5 {
+  background-color: #fd565f;
+  color: white;
+}
