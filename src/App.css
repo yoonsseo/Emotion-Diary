@@ -338,3 +338,80 @@ header button {
   background-color: #fd565f;
   color: white;
 }
+
+/* Diary */
+.DiaryPage {
+}
+
+.DiaryPage section {
+  width: 100%;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.DiaryPage h4 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.DiaryPage .diary_img_wrapper {
+  background-color: #ececec;
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  /* 세로 기준 가운데로 */
+}
+
+.DiaryPage .emotion_descript {
+  font-size: 25px;
+  color: white;
+}
+
+.DiaryPage .diary_img_wrapper_1 {
+  background-color: #64c964;
+}
+
+.DiaryPage .diary_img_wrapper_2 {
+  background-color: #9dd772;
+}
+
+.DiaryPage .diary_img_wrapper_3 {
+  background-color: #fdce17;
+}
+
+.DiaryPage .diary_img_wrapper_4 {
+  background-color: #fd8446;
+}
+
+.DiaryPage .diary_img_wrapper_5 {
+  background-color: #fd565f;
+}
+
+.DiaryPage .diary_content_wrapper {
+  width: 100%;
+  background-color: #ececec;
+  border-radius: 5px;
+  word-break: keep-all;
+  /* 텍스트의 줄바꿈 시 단어를 쪼개지 말 것 */
+  overflow-wrap: break-word;
+  /* 내용이 길어지면 줄바꿈 */
+}
+
+.DiaryPage .diary_content_wrapper p {
+  padding: 20px;
+  text-align: left;
+  /* 부모 요소가 width를 100%로 가져야 left로 붙을 수 있음 */
+  font-size: 20px;
+  font-family: "Yeon Sung";
+  font-weight: 400;
+  line-height: 2.5;
+  /* 글자의 높이 지정
+  글과 글 사이, 줄과 줄 사이 */
+}
