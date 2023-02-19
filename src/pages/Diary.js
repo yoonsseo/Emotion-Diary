@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+
 import { DiaryStateContext } from "../App";
 import MyButton from "../components/MyButton";
 import MyHeader from "../components/MyHeader";
@@ -7,6 +8,11 @@ import { getStringDate } from "../util/date";
 import { emotionList } from "../util/emotion";
 
 const Diary = () => {
+  useEffect(() => {
+    const titleElement = document.getElementsByTagName("title")[0];
+    titleElement.innerHTML = `감정 일기장 - ${id}번 일기 상세`;
+  }, []);
+
   const { id } = useParams();
 
   const diaryList = useContext(DiaryStateContext);

@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import MyHeader from "../components/MyHeader";
 import MyButton from "../components/MyButton";
-import { Navigate } from "react-router-dom";
 import { DiaryStateContext } from "../App";
 import DiaryList from "../components/DiaryList";
 
@@ -23,7 +22,10 @@ const Home = () => {
       const lastDay = new Date(
         curDate.getFullYear(),
         curDate.getMonth() + 1,
-        0
+        0,
+        23,
+        59,
+        59
       ).getTime();
 
       setData(
