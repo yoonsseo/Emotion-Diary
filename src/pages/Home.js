@@ -5,6 +5,11 @@ import { DiaryStateContext } from "../App";
 import DiaryList from "../components/DiaryList";
 
 const Home = () => {
+  useEffect(() => {
+    const titleElement = document.getElementsByTagName("title")[0];
+    titleElement.innerHTML = `감정 일기장`;
+  }, []);
+
   const diaryList = useContext(DiaryStateContext);
   const [data, setData] = useState([]);
 
